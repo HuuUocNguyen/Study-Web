@@ -1,0 +1,127 @@
+body {
+    font-family: Tahoman;
+    font-size: 13px;
+    width: 1000px;
+    /* can giua
+    */
+    margin: auto;
+}
+
+#menu_top {
+    color: white;
+    background: black;
+    height: 40px;
+    width: 1000px;
+}
+
+#banner {
+    text-align: center;
+    height: auto;
+    width: 1000px;
+}
+
+#main #left {
+    background: white;
+    width: 700px;
+    float: left;
+    min-height: 400px;
+}
+
+#main #right {
+    background: chartreuse;
+    float: left;
+    width: 300px;
+    min-height: 400px;
+    text-align: center;
+}
+
+#footer {
+    background: chartreuse;
+    width: 1000px;
+    text-align: center;
+    color: white;
+    height: 60px;
+    clear: left;
+    line-height: 60px;
+}
+
+#menu_top ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu_top ul li {
+    list-style: none;
+    float: left;
+}
+
+#menu_top ul li a {
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    padding: 0px 30px 0px 30px;
+    border-right: 1px solid #ccc;
+}
+
+#menu_top ul li a.active {
+    background: #5ca11a;
+}
+
+#banner img {
+    width: 1000px;
+}
+
+#main #left ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#main #left ul li {
+    list-style: none;
+    clear: left;
+    border-bottom: 2px solid #ccc;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#main #left ul li img {
+    float: left;
+    margin: 10px;
+}
+
+#main #left ul li h2 {
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+#main {
+    margin-top: 20px;
+}
+
+#main #right .menu_right ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#main #right .menu_right ul li {
+    list-style: none;
+}
+
+#main #right .menu_right h3 {
+    background: black;
+    height: 40px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    color: white;
+}
+
+#main #right .menu_right ul li a {
+    display: block;
+    text-decoration: none;
+    line-height: 32px;
+    border-bottom: 1px solid #ccc;
+}

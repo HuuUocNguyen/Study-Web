@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css" />
+    <script src="libs/angular.min.js"></script>
+    <script src="js/control.js" type="text/javascript"></script>
+</head>
+
+<!--ng-app="myApp" ng-controller="myController" để bao cả body (trong đó có table)-->
+
+<body ng-app="myapp" ng-controller="tableController">
+
+    <h2 style="text-align: center">Management Customer</h2>
+
+    <form>
+        <div class="container">
+            <label for="id"><b>Id</b></label>
+            <input type="text" ng-model="id" ng-disabled="!isCreate"
+            placeholder="id" name="id" required>
+
+            <label for="name"><b>Name</b></label>
+            <input input type="text" ng-model="name" placeholder="name" name="name" required>
+
+            <label for="address"><b>Address</b></label>
+            <input input type="text" ng-model="address" placeholder="address" name="address" required>
+
+            <button ng-click="addRow()"> Add</button></li> </br></br>
+            <button ng-click="updateToTable()"> Update</button></li>
+
+        </div>
+
+
+    </form>
+    <div class="container">
+        <h2 style="text-align: center">List Customer</h2>
+        <br />
+        <table class="table table-bordered data-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th width="200px">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--ng-repeat giong nhu 1 vong lap for-->
+                <tr ng-repeat="customers in listCustomers">
+                    <td><label>{{customers.id}}</label></td>
+                    <td><label>{{customers.name}}</label></td>
+                    <td><label>{{customers.address}}</label></td>
+
+                    <td>
+                        <input class='btn btn-danger'
+                            ng-click="updateRow(customers.id, customers.name, customers.address)" value="Edit"
+                            type="submit" />
+                        <input class='btn btn-danger' ng-click="deleteRow($index)" value="Delete" type="submit" style="background-color: crimson;
+                         " />
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
