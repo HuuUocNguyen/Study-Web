@@ -1,4 +1,4 @@
-# Intership-Web
+# Web
 - HTML
 - CSS
 - JavaScript
